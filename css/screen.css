@@ -10,6 +10,23 @@
 /*---------------------------------------/*
  # GENERIC
 /*---------------------------------------*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
 /*---------------------------------------/*
  # ELEMENTS
 /*---------------------------------------*/
@@ -18,14 +35,113 @@
     ---
     Default markup for page level elements
 */
+html {
+  font-size: 100%;
+  line-height: 1.5;
+  color: #212529;
+  font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
 /*
     Customize the background color and color to match your design.
 */
+::-moz-selection {
+  background-color: #4c6ef5;
+  color: white;
+}
+::selection {
+  background-color: #4c6ef5;
+  color: white;
+}
+
 /*
     Elements: typography
     ---
     Default markup for typographic elements
 */
+h1 {
+  font-size: 1.8020324707rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: calc(baseline * 5);
+}
+@media (min-width: 36.0625em) {
+  h1 {
+    font-size: 2.8865075782rem;
+    line-height: calc(baseline * 6);
+  }
+}
+@media (min-width: 48.0625em) {
+  h1 {
+    font-size: 3.6532361537rem;
+    line-height: calc(baseline * 8);
+  }
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.423828125rem;
+  margin-bottom: 1.5rem;
+  line-height: calc(baseline * 4);
+}
+
+h3 {
+  font-size: 1.423828125rem;
+  margin-bottom: 1.5rem;
+  line-height: calc(baseline * 3);
+}
+
+h4,
+h5,
+h6 {
+  margin-bottom: 1.5rem;
+  line-height: calc(baseline * 2);
+}
+
+p,
+ol,
+ul,
+dl,
+table,
+address,
+figure {
+  margin-bottom: 1.5rem;
+}
+
+ul,
+ol {
+  margin-bottom: 1.5rem;
+}
+
+blockquote {
+  margin-bottom: 1.5rem;
+}
+
+figcaption {
+  margin-bottom: 1.5rem;
+}
+
+hr {
+  margin-bottom: 1.5rem;
+}
+
+a {
+  margin-bottom: 1.5rem;
+}
+
+a:visited {
+  color: #4c6ef5;
+}
+
+a:hover {
+  color: #5c7cfa;
+}
+
+a:active {
+  color: #5c7cfa;
+}
+
 /*---------------------------------------/*
  # OBJECTS
 /*---------------------------------------*/
@@ -34,11 +150,38 @@
     ---
     Creates a horizontal row with padding
 */
+.o-row {
+  padding: 1.5rem 1.5rem 0;
+  display: flow-root;
+}
+
+.o-row--primary {
+  background-color: cornflowerblue;
+  color: black;
+}
+
+.o-row--dark {
+  background-color: #212529;
+  color: white;
+}
+
+@media (min-width: 48.0625em) {
+  .o-row--large {
+    padding: 3rem 3rem 1.5rem 3rem;
+  }
+}
+
 /*
     Objects: Container
     ---
     Creates a horizontal container that sets de global max-width
 */
+.o-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 75rem;
+}
+
 /*
     Objects: Layout
     ---
